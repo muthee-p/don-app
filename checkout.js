@@ -15,9 +15,15 @@ export async function checkout({lineItems}){
 const stripe = await getStripe();
 
 await stripe.redirectToCheckout({
-	mode: 'payment',
+	
+	mode: 'subscription',
 	lineItems,
-	successUrl: '${window.location.origin}/success?session_id={CHECKOUT_SESSION_ID}',
+	//: [{
+		//price: 'price_1234',
+		//quantity: 1
+	//}],
+	//successUrl: window.location.href,
+	successUrl: `${window.location.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
 	cancelUrl: window.location.origin
 })
 

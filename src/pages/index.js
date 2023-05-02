@@ -11,9 +11,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main >
+      <main className=' min-h-[100vh] flex justify-center flex-col items-center' >
             <p>Donate here</p>
-            <button onClick={(() => {
+            <form className='flex flex-col'>
+            <label>Your Name</label>
+            <input type='text' value='name' className='bg-gray-300 text-gray-700 mt-2 w-64 p-3 rounded-sm' />
+            
+            <label className='mt-2'>Amount</label>
+            <input type='text' value='name' className='bg-gray-300 text-gray-700 mt-2 w-64 p-3 rounded-sm' />
+            </form>
+            <button className='mt-4 p-2 bg-gray-700 hover:bg-gray-800 rounded-sm' onClick={(() => {
               checkout({
                 lineItems: [
                   {
@@ -22,7 +29,7 @@ export default function Home() {
                   }
                 ]
               })
-            })}>Donate here!</button>
+            })}>Donate</button>
       </main>
     </div>
   )
