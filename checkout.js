@@ -16,12 +16,16 @@ const stripe = await getStripe();
 
 await stripe.redirectToCheckout({
 	
-	mode: 'subscription',
-	lineItems,
-	//: [{
-		//price: 'price_1234',
-		//quantity: 1
-	//}],
+	mode: 'payment',
+	lineItems: [{
+		price: "price_1N3zmaAy6kbtVnGKpjDBBStw",
+		quantity: 1
+	},
+	{
+       price: "price_1N3zjrAy6kbtVnGKRd0NuBNu",
+         quantity: 1
+     },
+	],
 	//successUrl: window.location.href,
 	successUrl: `${window.location.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
 	cancelUrl: window.location.origin
