@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { ReactSVG } from 'react-svg';
-import { svgs } from '../../assets/svgs.js';
+//import { ReactSVG } from 'react-svg';
+//import { svgs } from '../../assets/svgs.js';
 
 
 function Header({ cartItems, totalItems }) {
@@ -24,7 +24,7 @@ function Header({ cartItems, totalItems }) {
           <li>
             <Link href="/cart">
               <button className='font-body hover:text-orange-500'>
-                 <ReactSVG src={svgs.myCart} />
+                 {/*<ReactSVG src={svgs.myCart} />*/}
                Cart ({totalItems})
               </button>
             </Link>
