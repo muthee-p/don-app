@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image'
-import { checkout } from "../../../checkout";
+import { checkout } from "../checkout";
 
 function ProductItem({ product, onAddToCart }) {
   const { id, name, price, image, description, priceId } = product;

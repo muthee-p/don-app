@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link';
-import {Header, ProductList, Cart}  from "./components";
-import {Paul, Tree} from '../assets'
+import {Header, ProductList, Cart}  from "../../components";
+import {Paul, Tree} from '../../assets'
 
 
 export default function Shop(){

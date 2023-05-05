@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import Cart from './components/Cart'
+import Cart from '../../components/Cart'
 
 export default function CartPage(){
 	// const [ cart, setCart] = useState([]);
